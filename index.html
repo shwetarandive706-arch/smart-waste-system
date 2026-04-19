@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSmart India | Municipal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="logo">🌿 EcoSmart <span style="font-size: 0.6rem; display: block; color: var(--text-dim);">Digital India</span></div>
+            <ul class="nav-links">
+                <li class="active" data-view="dashboard-view">Dashboard</li>
+                <li data-view="map-view">Map View</li>
+                <li data-view="analytics-view">Analytics</li>
+                <li data-view="settings-view">Settings</li>
+            </ul>
+            <div class="system-status">
+                <div class="status-dot"></div>
+                <span>Server: Mumbai-1</span>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <div class="header-info">
+                    <h1 id="view-title">City Dashboard</h1>
+                    <p id="date-display"></p>
+                </div>
+                <div class="user-profile">
+                    <div class="bell-icon">🔔<span class="notification-badge"></span></div>
+                    <span>Admin: Swachh Bharat</span>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+
+            <div id="dashboard-view" class="page-view">
+                <div class="stats-row">
+                    <div class="glass-card">
+                        <span class="label">Total Bins (Active)</span>
+                        <span class="value" id="total-count">0</span>
+                    </div>
+                    <div class="glass-card highlight">
+                        <span class="label">Critical Alerts</span>
+                        <span class="value" id="full-count">0</span>
+                    </div>
+                    <div class="glass-card">
+                        <span class="label">Collection Efficiency</span>
+                        <span class="value">92%</span>
+                    </div>
+                </div>
+                <div id="bin-grid" class="bin-grid">
+                    </div>
+            </div>
+
+            <div id="map-view" class="page-view" style="display:none;">
+                <div class="glass-card map-container">
+                    <div class="map-overlay">
+                        <h3>Live GIS Tracking</h3>
+                        <p>Showing 4 nodes across Bengaluru, Mumbai, Delhi, Pune</p>
+                    </div>
+                    <div id="map-placeholder">
+                        <div class="map-marker pulse" style="top: 60%; left: 45%;"></div>
+                        <div class="map-marker" style="top: 40%; left: 55%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="analytics-view" class="page-view" style="display:none;">
+                <div class="glass-card">
+                    <h3>Weekly Waste Volume (Metric Tons)</h3>
+                    <div class="chart-container">
+                        <div class="bar" style="height: 40%;" data-day="Mon"></div>
+                        <div class="bar" style="height: 60%;" data-day="Tue"></div>
+                        <div class="bar" style="height: 95%; background: var(--accent-red);" data-day="Wed"></div>
+                        <div class="bar" style="height: 70%;" data-day="Thu"></div>
+                        <div class="bar" style="height: 50%;" data-day="Fri"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings-view" class="page-view" style="display:none;">
+                <div class="glass-card settings-form">
+                    <h3>Municipal Configuration</h3>
+                    <div class="input-group">
+                        <label>Critical Alert Threshold (%)</label>
+                        <input type="number" id="threshold" value="80">
+                    </div>
+                    <div class="input-group">
+                        <label>Emergency Contact (WhatsApp)</label>
+                        <input type="text" value="+91 98765 43210">
+                    </div>
+                    <button class="action-btn">Save Changes</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
