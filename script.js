@@ -5,37 +5,38 @@ const BLYNK_API_URL = `https://blynk.cloud/external/api/get?token=${BLYNK_AUTH_T
 // 2. DATABASE: All 4 Original Indian Cities Restored
 const bins = [
     { 
-        id: "BNG-W80-01", 
-        location: "Indiranagar 100ft Rd", 
-        city: "Mumbai", 
-        ward: "Ward 80", 
-        level: 0, // Updated by GSM Hardware via Blynk
+        id: "PUN-KT-01", 
+        location: "Katraj", 
+        city: "Pune", 
+        ward: "Zone 2", 
+        level: 0,
         type: "dry",
         lastCleaned: "08:30 AM",
         status: "Connecting to GSM..." 
     },
     { 
-        id: "MUM-AW-04", 
+        
+        id: "PUN-AW-02", 
         location: "Sadashiv Peth", 
         city: "Pune", 
         ward: "A-Ward", 
-        level: 85, // Mock data for secondary bin
+        level: 85,
         type: "wet",
         lastCleaned: "06:15 AM",
-        status: "Simulated"
+        status: "Active"
     },
     { 
-        id: "DEL-CP-09", 
+        id: "PUN-SG-03", 
         location: "Swargate", 
         city: "Pune", 
-        ward: "NDMC Zone", 
+        ward: "Zone 3", 
         level: 45, 
         type: "dry",
         lastCleaned: "09:45 AM",
         status: "Simulated"
     },
     { 
-        id: "PUN-SV-02", 
+        id: "PUN-SN-04", 
         location: "FC Road, Shivajinagar", 
         city: "Pune", 
         ward: "Zone 4", 
@@ -44,6 +45,7 @@ const bins = [
         lastCleaned: "07:00 AM",
         status: "Simulated"
     }
+
 ];
 
 // 3. INITIALIZATION
