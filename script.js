@@ -17,7 +17,7 @@ const bins = [
     { 
         id: "MUM-AW-04", 
         location: "Marine Drive, South Mum", 
-        city: "Mumbai", 
+        city: "Pune", 
         ward: "A-Ward", 
         level: 85, // Mock data for secondary bin
         type: "wet",
