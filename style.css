@@ -11,6 +11,9 @@
 * {
      box-sizing: border-box; 
 }
+html {
+    scroll-behavior: smooth;
+}
 body 
 {
     margin: 0;
@@ -71,12 +74,13 @@ body
     overflow-y: auto;
     background: linear-gradient(to bottom right, #0f172a, #020617);
 }
-header 
-{ 
+header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .glass-card {
@@ -124,15 +128,16 @@ header
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     gap: 24px; 
 }
-.bin-card 
-{ 
-    text-align: center; 
-    transition: 0.3s; 
+.bin-card {
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid transparent;
 }
-.bin-card:hover 
-{ 
-    transform: translateY(-8px); 
-    border-color: var(--accent-blue); 
+
+.bin-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .visual-container 
@@ -217,4 +222,19 @@ header
      left: 50%; 
      transform: translateX(-50%);
      color: var(--text-dim); 
+}
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
 }
