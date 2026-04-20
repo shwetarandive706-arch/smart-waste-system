@@ -7,7 +7,7 @@ const bins = [
     { 
         id: "BNG-W80-01", 
         location: "Indiranagar 100ft Rd", 
-        city: "Bengaluru", 
+        city: "Mumbai", 
         ward: "Ward 80", 
         level: 0, // Updated by GSM Hardware via Blynk
         type: "dry",
@@ -16,7 +16,7 @@ const bins = [
     },
     { 
         id: "MUM-AW-04", 
-        location: "Marine Drive, South Mum", 
+        location: "Sadashiv Peth", 
         city: "Pune", 
         ward: "A-Ward", 
         level: 85, // Mock data for secondary bin
@@ -26,8 +26,8 @@ const bins = [
     },
     { 
         id: "DEL-CP-09", 
-        location: "Connaught Place", 
-        city: "Delhi", 
+        location: "Swargate", 
+        city: "Pune", 
         ward: "NDMC Zone", 
         level: 45, 
         type: "dry",
